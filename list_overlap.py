@@ -16,4 +16,34 @@ for item in c:
     if item not in d:
         d.append(item)
 
-print("The new list is:", str(d))
+print("New list with matching elements:", str(d))
+
+
+# generating two random lists to test the code
+import random
+
+random_list_a = []
+random_list_b = []
+
+random_list_a = random.sample(range(1, 89), 10)
+random_list_b = random.sample(range(1, 89), 10)
+
+print("Random list a:" + str(random_list_a))
+print("Random list b:" + str(random_list_b))
+
+# checking matching numbers and adding to list random_matching_list
+random_matching_list = []
+for item in random_list_a:
+    if item == item in random_list_b:
+        random_matching_list.append(item)
+
+# adding only the non duplicate items to list final_random_matching_list
+final_random_matching_list = []
+for item in random_matching_list:
+    if item not in final_random_matching_list:
+        final_random_matching_list.append(item)
+
+print("Final list with matching elements from random lists:", str(final_random_matching_list))
+
+
+
