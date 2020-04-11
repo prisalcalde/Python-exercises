@@ -1,13 +1,9 @@
-name = input("What's your name?")
+# Create a program that asks the user to enter their name and their age.
+# Print out a message addressed to them that tells them the year that
+# they will turn 100 years old
 
-print("Nice to meet you " + name +" !")
+name = input("What is your name? ")
+age = int(input("How old are you? "))
+year_100 = str((100 - age) + 2020)
 
-age = input("What's your age?")
-
-age = int(age)
-
-print("So you're already " + str(age) + " years old, " + name + " !")
-
-year_hundred = (100 - age) + 2020
-
-print("You'll be 100 years old in the year " + str(year_hundred) + "...")
+print(name + " you will be 100 in " + year_100)
