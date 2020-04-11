@@ -1,53 +1,32 @@
-"""
-num_holidays = input("How many days of holiday do you have per year? ")
+# Ask the user for a number. Depending on whether the number is even or odd,
+# print out an appropriate message to the user
 
-num_holidays = int(num_holidays)
+num = int(input("Give me a number\n"))
 
-num = num_holidays % 2 #num is the remainder of num_holidays / 2
-
-num = int(num)
-
-#if the remainder is zero, it's an even number, otherwise, it's odd
-
-if num == 0:
-    print("It's an even number, enjoy it :)")
+if num % 2 == 0:
+    print("Even")
 else:
-    print("That's odd. The number of days of holidays you have is an odd number!")
+    print("Odd")
 
-"""
+# If the number is a multiple of 4, print out a different message
+#
+num = int(input("Give me a number\n"))
 
-num_quarantine = input("How many days do you think we'll be in quarantine because of the coronavirus?\n ")
-
-num_quarantine = int(num_quarantine)
-
-num = num_quarantine % 2 #num is the remainder of num_quarantine / 2
-
-num = int(num)
-
-num_four = num_quarantine % 4 #num is the remainder of num_quarantine / 4
-
-num_four = int(num_four)
-
-#if the remainder num is zero, it's an even number, otherwise, it's odd
-
-#if the remainder num_four is zero, it's an even number, otherwise, it's odd
-
-if num == 0 and num_four == 0:
-    print("That's an even number multiple of 4!")
-elif num == 0:
-    print("That's an even number...")
+if num % 2 == 0 and num % 4 == 0:
+    print("Multiple of four")
+elif num % 2 == 0:
+    print("Even")
 else:
-    print("That's an odd number!")
+    print("Odd")
 
-num2 = input("\nNow, give me another number:\n ")
+# Ask the user for two numbers: one number to check (call it num)
+# and one number to divide by (check). If check divides evenly into num,
+# tell that to the user. If not, print a different appropriate message
 
-num2 = int(num2)
+num = int(input("Give me a number: "))
+check = int(input("Another number: "))
 
-num3 = input("\nAlright, last number now and we are done:\n ")
-
-num3= int(num3)
-
-if num2 % num3 == 0:
-    print("Your second number divided by the third one is even")
+if num % check == 0:
+    print("Yes")
 else:
-    print("Your second number divided by the third one is an odd number")
+    print("No")
