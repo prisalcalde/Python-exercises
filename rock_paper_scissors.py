@@ -16,53 +16,55 @@
 # 8. if the inputs are the same, start again
 # 9. end
 
-player_1 = input("Player 1: Rock, paper or scissors? ")
-player_2 = input("Player 2: Rock, paper or scissors? ")
-
-def rock_paper_scissors(player_1, player_2):
+def rock_paper_scissors():
+    player_1 = input("What's your name? ")
+    player_2 = input("And your name? ")
+    player_1_answer = input(player_1 + ", rock, paper or scissors? ")
+    player_2_answer = input(player_2 + ", rock, paper or scissors? ")
     while True:
-        if player_1 == "rock" and player_2 == "paper":
-            print("Congratulations, player 2! \nDo you want to start a new game?")
+        if player_1_answer == "rock" and player_2_answer == "paper":
+            print("Congratulations, " + player_2 + "!\nDo you want to start a new game?")
+            if input() == "yes":
+                print("Great! Let's do it :)")
+                rock_paper_scissors()
+                break
+            else:
+                print("Alright, see you later!")
+            break
+        if player_1_answer == "rock" and player_2_answer == "scissors":
+            print("Congratulations, " + player_1 + "!\nDo you want to start a new game?")
             if input() == "yes":
                 print("Great! Let's do it :)")
                 break
             else:
                 print("Alright, see you later!")
             break
-        if player_1 == "rock" and player_2 == "scissors":
-            print("Congratulations, player 1! \nDo you want to start a new game?")
+        if player_1_answer == "paper" and player_2_answer == "scissors":
+            print("Congratulations, " + player_2 + "!\nDo you want to start a new game?")
             if input() == "yes":
                 print("Great! Let's do it :)")
                 break
             else:
                 print("Alright, see you later!")
             break
-        if player_1 == "paper" and player_2 == "scissors":
-            print("Congratulations, player 2! \nDo you want to start a new game?")
+        if player_1_answer == "paper" and player_2_answer == "rock":
+            print("Congratulations, " + player_1 + "!\nDo you want to start a new game?")
             if input() == "yes":
                 print("Great! Let's do it :)")
                 break
             else:
                 print("Alright, see you later!")
             break
-        if player_1 == "paper" and player_2 == "rock":
-            print("Congratulations, player 1! \nDo you want to start a new game?")
+        if player_1_answer == "scissors" and player_2_answer == "rock":
+            print("Congratulations, " + player_2 + "!\nDo you want to start a new game?")
             if input() == "yes":
                 print("Great! Let's do it :)")
                 break
             else:
                 print("Alright, see you later!")
             break
-        if player_1 == "scissors" and player_2 == "rock":
-            print("Congratulations, player 2! \nDo you want to start a new game?")
-            if input() == "yes":
-                print("Great! Let's do it :)")
-                break
-            else:
-                print("Alright, see you later!")
-            break
-        if player_1 == "scissors" and player_2 == "paper":
-            print("Congratulations, player 1! \nDo you want to start a new game?")
+        if player_1_answer == "scissors" and player_2_answer == "paper":
+            print("Congratulations, " + player_1 + "!\nDo you want to start a new game?")
             if input() == "yes":
                 print("Great! Let's do it :)")
                 break
@@ -70,11 +72,10 @@ def rock_paper_scissors(player_1, player_2):
                 print("Alright, see you later!")
             break
         else:
-            player_1 = input("Play again: Player 1: Rock, paper or scissors? ")
-            player_2 = input("Play again: Player 2: Rock, paper or scissors? ")
+            player_1_answer = input("It's a tie, let's do it again.\n" + player_1 + ": Rock, paper or scissors? ")
+            player_2_answer = input(player_2 + ": Rock, paper or scissors? ")
 
-rock_paper_scissors(player_1, player_2)
-
+rock_paper_scissors()
 
 
 
