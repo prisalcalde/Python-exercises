@@ -20,11 +20,11 @@ print(random_num)
 
 # define too low, too high and exactly right
 
-if num < random_num:
-    print("Too low")
-
-if num > random_num:
-    print("Too high")
-
 if num == random_num:
     print("Exactly right")
+
+elif num > random_num:
+    print("Too high")
+
+else:
+    print("Too low")
