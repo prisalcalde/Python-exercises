@@ -40,17 +40,17 @@ def guessing_game():
 
     while True:
         if num == random_num:
-            print("Exactly right, type 'exit' to end the game or 'play' to continue")
-            if input() == "play":
+            print("Exactly right, type 'exit' to end the game or press any key to continue")
+            if input() != "exit":
                 guessing_game()
 
         elif num > random_num:
-            print("Too high, type 'exit' to end the game or 'play' to continue")
+            print("Too high, type 'exit' to end the game or press any key to continue")
             if input() != "exit":
                 guessing_game()
 
         else:
-            print("Too low, type 'exit' to end the game or 'play' to continue")
+            print("Too low, type 'exit' to end the game or press any key to continue")
             if input() != "exit":
                 guessing_game()
         break
