@@ -6,6 +6,7 @@
 # - Keep track of how many guesses the user has taken, and when
 # the game ends, print this out
 
+"""
 # import the random module 
 import random
 
@@ -28,7 +29,7 @@ elif num > random_num:
 
 else:
     print("Too low")
-    
+"""
     
 # Keep the game going until the user types “exit”
 import random
