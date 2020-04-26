@@ -52,7 +52,7 @@ def guessing_game():
             print("Too low, type 'exit' to end the game or press any key to continue")
             if input() != "exit":
                 guessing_game()
-        return
+            return
 
 guessing_game()
 
