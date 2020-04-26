@@ -6,54 +6,59 @@
 # - Keep track of how many guesses the user has taken, and when
 # the game ends, print this out
 
-"""
-# import the random module 
-import random
+# # import the random module
+# import random
+#
+# # ask a number between 1 and 9 to the user and store it in num
+# num = int(input("Guess a number between 1 and 9:\n"))
+#
+# # generate random number between 1 & 9, including 1 and 9
+# # and store it in random_num variable
+#
+# random_num = random.randrange(1, 10, 1)
+# print(random_num)
+#
+# # define too low, too high and exactly right
+#
+# if num == random_num:
+#     print("Exactly right")
+#
+# elif num > random_num:
+#     print("Too high")
+#
+# else:
+#     print("Too low")
 
-# ask a number between 1 and 9 to the user and store it in num
-num = int(input("Guess a number between 1 and 9:\n"))
 
-# generate random number between 1 & 9, including 1 and 9 
-# and store it in random_num variable
-
-random_num = random.randrange(1, 10, 1)
-print(random_num)
-
-# define too low, too high and exactly right
-
-if num == random_num:
-    print("Exactly right")
-
-elif num > random_num:
-    print("Too high")
-
-else:
-    print("Too low")
-"""
-    
 # Keep the game going until the user types “exit”
+# Keep track of how many guesses the user has taken, and when
+# the game ends, print this out
 import random
 
-def guessing_game():
+def guessing_game(count = 0):
     num = int(input("Guess a number between 1 and 9:\n"))
     random_num = random.randrange(1, 10, 1)
     print(random_num)
+    count = count + 1
 
     while True:
+
         if num == random_num:
             print("Exactly right, type 'exit' to end the game or press any key to continue")
-            if input() != "exit":
-                guessing_game()
+
         elif num > random_num:
             print("Too high, type 'exit' to end the game or press any key to continue")
-            if input() != "exit":
-                guessing_game()
+
         else:
             print("Too low, type 'exit' to end the game or press any key to continue")
-            if input() != "exit":
-                guessing_game()
-            return
 
-guessing_game()
+        if input() == "exit":
+            print('count: %d' % count)
+            exit(0)
+
+        guessing_game(count)
+
+guessing_game(0)
+
 
 
