@@ -22,8 +22,10 @@ print(random_num)
 
 if num == random_num:
     print("Exactly right")
+    
 elif num > random_num:
     print("Too high")
+    
 else:
     print("Too low")
 
