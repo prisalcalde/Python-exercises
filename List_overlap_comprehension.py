@@ -16,3 +16,16 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 c = {i for i in a if i == i in b}
 
 print(c)
+
+# ensuring this work on random lists of different sizes
+
+import random
+
+d = random.sample(range(1, 100), 20)
+e = random.sample(range(1, 100), 10)
+
+f = {i for i in d if i == i in e}
+
+print(d)
+print(e)
+print(f)
