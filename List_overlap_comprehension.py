@@ -13,7 +13,7 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 # using set comprehension (sets have no duplicates)
 
-c = {i for i in a if i == i in b}
+c = [i for i in set(a) if i == i in b]
 
 print(c)
 
@@ -24,7 +24,7 @@ import random
 d = random.sample(range(1, 100), 20)
 e = random.sample(range(1, 100), 10)
 
-f = {i for i in d if i == i in e}
+f = [i for i in set(d) if i in e]
 
 print(d)
 print(e)
