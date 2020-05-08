@@ -13,7 +13,6 @@
 # b.append(a[-1])
 # print(b)
 
-
 # inside of a function
 
 def list_ends(a = [5, 10, 15, 20, 25]):
@@ -26,6 +25,15 @@ def list_ends(a = [5, 10, 15, 20, 25]):
         return
 
 list_ends()
+
+# alternative solution 
+
+a = [5, 10, 15, 20, 25]
+
+def list_ends(x):
+    return [x[0], x[-1]]
+
+print(list_ends(a))
 
 
 
