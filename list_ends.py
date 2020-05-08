@@ -1,29 +1,31 @@
-"""
-#Without list function
+# Write a program that takes a list of numbers
+# (for example, a = [5, 10, 15, 20, 25]) and
+# makes a new list of only the first and last
+# elements of the given list. For practice,
+# write this code inside a function.
 
-list = [3, 6, 9, 12, 15, 18, 21, 24, 27]
+# # for loop without a function
+#
+# a = [5, 10, 15, 20, 25]
+# b = []
+#
+# b.append(a[0])
+# b.append(a[-1])
+# print(b)
 
-accessing the elements of the list by index (starts with 0)
 
-new_list = [list[0], list[8]]
+# inside of a function
 
-print(new_list)
+def list_ends(a = [5, 10, 15, 20, 25]):
+    b = []
 
+    for x in a:
+        b.append(a[0])
+        b.append(a[-1])
+        print(b)
+        return
 
-#With list function
-
-list = [3, 6, 9, 12, 15, 18, 21, 24, 27]
-
-list[1:8] = []
-
-print(list)
-
-"""
-
-#With function for any list
-
-def list(elem):
-    return [elem[0], elem[len(elem)-1]]
+list_ends()
 
 
 
