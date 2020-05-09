@@ -3,27 +3,27 @@
 # generate. (Hint: The Fibonnaci sequence is a sequence of numbers where the next number in the sequence is the sum of the 
 # previous two numbers in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
 
-def fib_gen(n = int(input("How many fibonacci numbers would you like me to generate? "))):
-    a = 0
-    b = 1
+# function that returns a fibonacci sequence (list)
+def fibonacci(num = int(input("How many fibonacci numbers would you like to generate? "))):
 
-    # will print 0 - the first fibonacci number
-    if n == 1:
-        print(a)
+    # i = index of the list
+    i = 1
 
-    # will print 0, 1 and the other fibonacci numbers
-    else:
-        print(a)
-        print(b)
+    if num == 0:
+        fib = []
+    elif num == 1:
+        fib = [1]
+    elif num == 2:
+        fib = [1,1]
+    elif num > 2:
+        fib = [1,1]
+        # num - 1 is the index of the last item of the list
+        while i < (num - 1):
+            fib.append(fib[i] + fib[i-1])
+            i += 1
+    return fib
 
-    # 2 is the third position because the first and second are a and b
-    for i in range(2, n):
-        c = a + b
-        a = b
-        b = c
-        print(c)
-
-fib_gen()
+print(fibonacci())
 
 
 
