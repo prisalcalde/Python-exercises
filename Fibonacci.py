@@ -5,8 +5,7 @@
 
 # function that returns a fibonacci sequence (list)
 def fibonacci(num = int(input("How many fibonacci numbers would you like to generate? "))):
-
-    # i = index of the list
+    
     i = 1
 
     if num == 0:
