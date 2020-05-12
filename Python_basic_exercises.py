@@ -44,3 +44,20 @@ print("The area of a circle with radius " + str(radius) + " is " + str(area))
 first_name = input("What's your first name? ")
 last_name = input("What's your last name? ")
 print(last_name + " " + first_name)
+
+# 6. Write a Python program which accepts a sequence of
+# comma-separated numbers from user and generate a list
+# and a tuple with those numbers.
+# Sample data : 3, 5, 7, 23
+# Output :
+# List : ['3', ' 5', ' 7', ' 23']
+# Tuple : ('3', ' 5', ' 7', ' 23')
+
+# sequence will generate a string
+sequence = input("Give me a sequence of numbers separated by commas: ")
+
+# split() breaks the string by the specified separator
+list = sequence.split(",") 
+tuple = tuple(list)
+print("List: ",list)
+print("Tuple: ",tuple)
