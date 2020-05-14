@@ -67,11 +67,6 @@ print("Tuple: ",tuple)
 # filename : abc.java
 # Output : java
 
-import os
-
 file_name = input("What's the file name? ")
-
-# separates the file name and the file extension creating a tuple
-tup = os.path.splitext(file_name)
-file_extension = tup[1]
-print(file_extension.replace(".", ""))
+file_extension = file_name.split(".")
+print(file_extension[-1])
