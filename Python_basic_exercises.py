@@ -61,3 +61,17 @@ list = sequence.split(",")
 tuple = tuple(list)
 print("List: ",list)
 print("Tuple: ",tuple)
+
+# 7. Write a Python program to accept a filename from the user
+# and print the extension of that. Go to the editor Sample
+# filename : abc.java
+# Output : java
+
+import os
+
+file_name = input("What's the file name? ")
+
+# separates the file name and the file extension creating a tuple
+tup = os.path.splitext(file_name)
+file_extension = tup[1]
+print(file_extension.replace(".", ""))
