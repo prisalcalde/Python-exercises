@@ -73,7 +73,9 @@ print(file_extension[-1])
 
 # 8. Write a Python program to display the first and last colors
 # from the following list.
-
 colour_list = ["Red","Green","White" ,"Black"]
 
-print("The first colour is " + str(colour_list[0].lower()) + " and the last colour is " + str(colour_list[-1].lower()))
+print(colour_list[0].lower(), colour_list[-1].lower())
+
+# using string formating operator %s 
+print("%s %s"%(colour_list[0].lower(), colour_list[-1].lower()))
