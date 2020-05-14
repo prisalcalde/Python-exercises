@@ -77,5 +77,5 @@ colour_list = ["Red","Green","White" ,"Black"]
 
 print(colour_list[0].lower(), colour_list[-1].lower())
 
-# using string formating operator %s 
+# using string formatting operator %s 
 print("%s %s"%(colour_list[0].lower(), colour_list[-1].lower()))
