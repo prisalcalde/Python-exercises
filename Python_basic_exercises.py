@@ -79,3 +79,12 @@ print(colour_list[0].lower(), colour_list[-1].lower())
 
 # using string formatting operator %s 
 print("%s %s"%(colour_list[0].lower(), colour_list[-1].lower()))
+
+# 9. Write a Python program to display the examination schedule.
+# (extract the date from exam_st_date).
+# exam_st_date = (14, 10, 2020)
+# Sample Output : The examination will start from : 14 / 10 / 2020
+
+exam_st_date = (14, 10, 2020)
+
+print("%s %d / %d / %d"%('The examination will start from:', 14, 10, 2020))
