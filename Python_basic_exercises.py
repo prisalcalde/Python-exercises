@@ -70,3 +70,10 @@ print("Tuple: ",tuple)
 file_name = input("What's the file name? ")
 file_extension = file_name.split(".")
 print(file_extension[-1])
+
+# 8. Write a Python program to display the first and last colors
+# from the following list.
+
+colour_list = ["Red","Green","White" ,"Black"]
+
+print("The first colour is " + str(colour_list[0].lower()) + " and the last colour is " + str(colour_list[-1].lower()))
