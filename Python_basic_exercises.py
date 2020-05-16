@@ -88,3 +88,52 @@ print("%s %s"%(colour_list[0].lower(), colour_list[-1].lower()))
 exam_st_date = (14, 10, 2020)
 
 print("%s %d / %d / %d"%('The examination will start from:', 14, 10, 2020))
+
+# 10. Write a Python program that accepts an integer (n) and
+# computes the value of n+nn+nnn. Go to the editor
+# Sample value of n is 5
+# Expected Result : 615
+
+n = int(input("Give me a number: "))
+
+# defining n, nn, nnn with strings and then
+# transforming n, nn, nnn in integers to calculate the sum
+n1 = int("%s" % (n))
+n2 = int("%s%s" % (n,n))
+n3 = int("%s%s%s" % (n,n,n))
+
+print(n1 + n2 + n3)
+
+# 11. Write a Python program to print the documents
+# (syntax, description etc.) of Python built-in function(s).
+# Sample function : abs()
+# Expected Result :
+# abs(number) -> number
+# Return the absolute value of the argument.
+
+docstring describes what the built-in function does
+print(abs.__doc__)
+
+print(all.__doc__)
+
+print(any.__doc__)
+
+print(bin.__doc__)
+
+print(bytearray.__doc__)
+
+12. Write a Python program to print the calendar of a
+given month and year.
+Note : Use 'calendar' module.
+
+import calendar
+
+# calendar.month(year, month)
+# leading zeros in decimal integer liter
+# als are not permitted;
+# use an 0o prefix for octal integers
+
+may2020 = calendar.month(2020, 0o5)
+
+print(may2020)
+
