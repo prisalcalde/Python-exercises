@@ -87,7 +87,23 @@ print("%s %s"%(colour_list[0].lower(), colour_list[-1].lower()))
 
 exam_st_date = (14, 10, 2020)
 
+day = int(14)
+month = int(10)
+year = int(2020)
+
+# using %-formatting
 print("%s %d / %d / %d"%('The examination will start from:', 14, 10, 2020))
+
+# using str.format()
+print("The examination will start from: " + str(14) + " / " + str(10) + " / " + str(2020))
+
+# using f-Strings
+print(
+    f"The examination will start from: "
+    f"{day} / "
+    f"{month} / "
+    f"{year}"
+      )
 
 # 10. Write a Python program that accepts an integer (n) and
 # computes the value of n+nn+nnn. Go to the editor
