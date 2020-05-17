@@ -73,12 +73,20 @@ print(file_extension[-1])
 
 # 8. Write a Python program to display the first and last colors
 # from the following list.
-colour_list = ["Red","Green","White" ,"Black"]
+colour_list = ["Red","Green","White","Black"]
 
 print(colour_list[0].lower(), colour_list[-1].lower())
 
-# using string formatting operator %s 
+# using string formatting operator %s
 print("%s %s"%(colour_list[0].lower(), colour_list[-1].lower()))
+
+# using f-strings
+first_colour = colour_list[0].lower()
+last_colour = colour_list[-1].lower()
+print(
+    f"{first_colour} "
+    f"{last_colour}"
+)
 
 # 9. Write a Python program to display the examination schedule.
 # (extract the date from exam_st_date).
