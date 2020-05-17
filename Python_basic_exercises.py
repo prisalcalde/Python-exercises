@@ -190,3 +190,19 @@ print(date1)
 print(date2)
 
 print(num_dates)
+
+# 15. Write a Python program to get the volume of a sphere with radius 6.
+
+# vol = 4/3 x pi x r3
+
+import math
+pi = math.pi
+r = 6
+vol = (4/3) * (pi) * (r*r*r)
+
+print(
+    f"The volume of a sphere with radius "
+    f"{r} "
+    f"is "
+    f"{vol}"
+)
