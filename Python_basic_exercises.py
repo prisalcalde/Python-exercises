@@ -96,13 +96,13 @@ print("%s %d / %d / %d"%('The examination will start from:', 14, 10, 2020))
 
 n = int(input("Give me a number: "))
 
-# defining n, nn, nnn with strings and then
-# transforming n, nn, nnn in integers to calculate the sum
-n1 = int("%s" % (n))
-n2 = int("%s%s" % (n,n))
-n3 = int("%s%s%s" % (n,n,n))
+# # defining n, nn, nnn with strings and then
+# # transforming n, nn, nnn in integers to calculate the sum
+n1 = str(n)
+n2 = n1 + n1
+n3 = n1 + n2
 
-print(n1 + n2 + n3)
+print(int(n1) + int(n2) + int(n3))
 
 # 11. Write a Python program to print the documents
 # (syntax, description etc.) of Python built-in function(s).
