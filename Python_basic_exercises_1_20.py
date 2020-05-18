@@ -232,3 +232,17 @@ def test(n):
     else:
         print("Out of the ranges")
         return
+    
+# 18. Write a Python program to calculate the sum of three given
+# numbers, if the values are equal then return three times of their sum.
+
+def calculate(x, y, z):
+    sum = x + y + z
+    if x == y == z:
+        sum = 3*sum
+        return sum
+    else:
+        return sum
+
+print(calculate(5, 5, 5))
+print(calculate(1, 2, 5))
