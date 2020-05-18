@@ -206,3 +206,29 @@ print(
     f"is "
     f"{vol}"
 )
+
+# 16. Write a Python program to get the difference between a given
+# number and 17, if the number is greater than 17 return double the
+# absolute difference.
+
+def function_17():
+
+    dif = int(input("Give me a number: ")) - 17
+    if dif > 17:
+        return abs(2*dif)
+
+print(function_17())
+
+# 17. Write a Python program to test whether a number is within
+# 100 of 1000 or 2000.
+
+def test(n):
+    if 100 <= n <= 1000:
+        print("Within 100 and 1000")
+        return
+    elif 100 < n <= 2000:
+        print("Within 100 and 2000")
+        return
+    else:
+        print("Out of the ranges")
+        return
