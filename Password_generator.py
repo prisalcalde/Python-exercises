@@ -119,7 +119,9 @@ def gen_password():
 
     elif strength == "weak":
         password_list = ["blueberry", "raspberry", "strawberry", "broccolli", "apple", "lettuce"]
-        password = random.choice(password_list)
+        password_list = random.sample(password_list, 2)
+        random.shuffle(password_list)
+        password = "".join([str(x) for x in password_list])
         print(password)
         return password
 
