@@ -131,11 +131,3 @@ def gen_password():
 
 
 gen_password()
-
-
-
-
-
-
-
-
