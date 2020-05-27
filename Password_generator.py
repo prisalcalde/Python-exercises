@@ -10,9 +10,28 @@
 # - Ask the user how strong they want their password to be.
 # - For weak passwords, pick a word or two from a list.
 
-# *** First solution (not optmised yet, but works) ***
+# -------------------------------------------------------
+# *** Second solution ***
+# - Removed the string variables
+# - Defined the password variable with the random generators directly (without using a list)
+# -------------------------------------------------------
+
+import random
+import string
+
+# Function to generate a random 6 character-password
+def gen_password():
+    password = (str(random.randrange(10))) + random.choice(string.punctuation) + random.choice(string.ascii_lowercase) +random.choice(string.punctuation) + random.choice(string.ascii_uppercase + str(random.randrange(10)))
+    print(password)
+    return password
+
+
+gen_password()
 
 # -------------------------------------------------------
+# *** First solution (not optmised yet, but works) ***
+# -------------------------------------------------------
+
 # Module to generate random stuff
 import random
 
