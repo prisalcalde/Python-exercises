@@ -11,6 +11,20 @@
 # - For weak passwords, pick a word or two from a list.
 
 # -------------------------------------------------------
+# *** Fourth solution ***
+# (from: https://www.practicepython.org/solution/2014/06/06/16-password-generator-solutions.html)
+# -------------------------------------------------------
+import random
+import string
+
+# Function to generate a random xx character-password (xx = user's choice)
+def gen_password(count, characters=string.ascii_letters + string.digits + string.punctuation):
+    return "".join(random.choice(characters) for x in range(count))
+
+
+print(gen_password(count=int(input("How many characters do you want in your password? "))))
+
+# -------------------------------------------------------
 # *** Third solution ***
 # - Easier to read
 # -------------------------------------------------------
