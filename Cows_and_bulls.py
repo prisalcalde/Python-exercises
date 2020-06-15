@@ -55,7 +55,4 @@ if __name__ == "__main__": # the code below will only run in this file
         if cow_bull_count[0] == 4:
             print("Congratulations! You won after " + str(number_of_plays) + " guesses!")
             break
-
-
-
-
+            
