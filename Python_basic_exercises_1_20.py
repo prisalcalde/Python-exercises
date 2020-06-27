@@ -263,3 +263,14 @@ print(new_str("Is purple"))
 print(new_str("Blue"))
 print(new_str("Is red"))
 print(new_str("Green"))
+
+# 20. Write a Python program to get a string which
+# is n (non-negative integer) copies of a given string.
+
+def get_str(n, given_string):
+    if n > 0:
+        return n*(str(given_string))
+
+print(get_str(30, "Blue"))
+print(get_str(7, "Grey"))
+print(get_str(-12, "Purple"))
