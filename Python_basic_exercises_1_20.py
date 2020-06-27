@@ -246,3 +246,20 @@ def calculate(x, y, z):
 
 print(calculate(5, 5, 5))
 print(calculate(1, 2, 5))
+
+# 19. Write a Python program to get a new string from a given string
+# where "Is" has been added to the front. If the given string already
+# begins with "Is" then return the string unchanged.
+
+def new_str(given_string):
+    new_string = str("Is " + given_string)
+    for i in given_string:
+        if given_string[0] + given_string[1] == "Is":
+            return given_string
+        else:
+            return new_string
+
+print(new_str("Is purple"))
+print(new_str("Blue"))
+print(new_str("Is red"))
+print(new_str("Green"))
