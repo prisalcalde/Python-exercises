@@ -12,3 +12,17 @@ def odd_even():
         print("Odd")
 
 odd_even()
+
+# 22. Write a Python program to count the number 4 in a given list.
+
+def count_fours(given_list):
+    count = 0
+    for item in given_list:
+        if item == 4:
+            count += 1
+    return count
+
+
+count_fours([5, 6, 3, 4, 4, 4, 7, 4, 5, 6])
+count_fours([4, 4, 4, 4, 4])
+count_fours([])
