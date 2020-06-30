@@ -26,3 +26,19 @@ def count_fours(given_list):
 count_fours([5, 6, 3, 4, 4, 4, 7, 4, 5, 6])
 count_fours([4, 4, 4, 4, 4])
 count_fours([])
+
+# 23. Write a Python program to get the n (non-negative integer)
+# copies of the first 2 characters of a given string. Return the n
+# copies of the whole string if the length is less than 2.
+
+def get_n_first_two_characters(n, given_string):
+
+    if len(given_string) < 2:
+        return n*given_string
+    else:
+        first_two_characters = given_string[0] + given_string[1]
+        return n*first_two_characters
+
+
+print(get_n_first_two_characters(3, "tea"))
+print(get_n_first_two_characters(78, "t"))
