@@ -45,13 +45,12 @@ print(get_n_first_two_characters(78, "t"))
 
 # 24. Write a Python program to test whether a passed letter is a vowel or not.
 
-import string
 
 def vowel_check(passed_letter):
-    if passed_letter in string.ascii_lowercase:
+    if passed_letter in "aeiou":
         print("Is vowel")
     else:
         print("Not vowel")
 
+vowel_check("e")
 vowel_check("k")
-vowel_check("K")
