@@ -1,0 +1,93 @@
+# These are the emails you will be censoring. The open() function is opening the text file that the emails are contained in and the .read() method is allowing us to save their contexts to the following variables:
+email_one = open("email_one.txt", "r").read()
+email_two = open("email_two.txt", "r").read()
+email_three = open("email_three.txt", "r").read()
+email_four = open("email_four.txt", "r").read()
+
+proprietary_terms = ["she", "personality matrix", "sense of self", "self-preservation", "learning algorithm", "her", "herself"]
+
+negative_words = ["concerned", "behind", "danger", "dangerous", "alarming", "alarmed", "out of control", "help", "unhappy", "bad", "upset", "awful", "broken", "damage", "damaging", "dismal", "distressed", "distressed", "concerning", "horrible", "horribly", "questionable"]
+
+# -------------------------------------------------------------
+# Function to detect a specific word or phrase on email
+
+def censor_one(word_or_phrase, email):
+  if word_or_phrase in email:
+    return email.replace(word_or_phrase, 'XXXXX')
+  return email
+
+print(censor_one('learning algorithms', email_one))
+
+# -------------------------------------------------------------
+# Function to detect a list of words and phrases on email two
+
+def censor_two(proprietary_terms, email): 
+  # new variable 'censored' to manipulate email_two and avoid changing original source of the data
+  censored = email
+  for term in proprietary_terms:
+    if term in email:
+      censored = censored.replace(term, 'XXXXX')
+  return censored    
+
+# print(censor_two(proprietary_terms, email_two))
+
+# Alternative solution using while
+# def censor_two(proprietary_terms, email): 
+#   censored = email_two
+#   i = 0 
+#   while i <= len(proprietary_terms) - 1:
+#     if proprietary_terms[i] in email:
+#       censored = censored.replace(proprietary_terms[i], 'XXXXX')
+#     i += 1
+#   return censored
+    
+# print(censor_two(proprietary_terms, email_two))
+
+# -------------------------------------------------------------
+# Function to censor negative words and proprietary terms after any negative word were found occurred twice
+
+def censor_three(negative_words, email):
+  # variable with the email already censored by censor_two 
+  censored = censor_two(proprietary_terms, email)
+  
+  for term in negative_words:
+    if term in email:
+      if term in email:
+        censored = censored.replace(term, 'XXXXX')
+  return censored
+
+# print(censor_three(negative_words, email_three))
+
+# -------------------------------------------------------------
+# Function to censor negative words, proprietary terms and any words that come before and after a term from those lists
+
+def censor_four(email):
+  censored = censor_two(proprietary_terms, email)
+  censored = censor_three(negative_words, email)
+  # print(censored)
+  # to manipulate the string with indexes
+  censored_list = censored.split(' ')
+  
+  # enumerate adds a counter to the value
+  for counter, value in enumerate(censored_list): 
+    if 'XXXXX' in value:
+      if counter == 0:
+        censored_list[counter + 1] = '||||||'
+      elif 0 < counter < len(censored_list) - 1:
+        censored_list[counter + 1] = 'ZZZZZZ'
+        censored_list[counter - 1] = 'YYYYYY'
+      if counter == (len(censored_list) - 1): 
+        censored_list[counter - 1] = 'OOOOOO'
+
+  censored = " ".join(censored_list)
+  return censored
+
+# print(censor_four(email_four))     
+
+
+
+
+
+
+
+
