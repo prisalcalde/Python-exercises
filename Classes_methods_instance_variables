@@ -1,0 +1,42 @@
+class Student:
+
+  # giving the class Student a constructor
+  def __init__(self, name, year):
+    self.name = name
+    self.year = year
+    self.grades = [] 
+
+  def add_grade(self, grade):
+    # Grade is the class defined below
+    if type(grade) == Grade: 
+      self.grades.append(grade)
+    else:
+      return
+  def get_average(self):
+    return 
+
+class Grade:
+  minimum_passing = 65
+
+  # giving the class Grade a constructor
+  def __init__(self, score):
+    self.score = score
+
+  def is_passing(self):
+    if score >= minimum_passing:
+      return True
+
+# instantiating the Student class
+roger = Student("Roger van der Weyden", 10)
+sandro = Student("Sandro Botticelli", 12)
+pieter = Student("Pieter Bruegel the Elder", 8)
+
+# instantiating the Grade class
+grade = Grade(100)
+
+# adding a grade score to Pieter
+pieter.add_grade(grade)
+
+
+
+
