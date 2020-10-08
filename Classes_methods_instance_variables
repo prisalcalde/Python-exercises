@@ -12,8 +12,6 @@ class Student:
       self.grades.append(grade)
     else:
       return
-  def get_average(self):
-    return 
 
 class Grade:
   minimum_passing = 65
