@@ -11,7 +11,9 @@ def reverse_word_order():
 print(reverse_word_order())
 
 
-#Reverse word:
+# --------------------------------------------------------------------
+
+# Printing every other letter in a string
 
 # def every_other_letter(word):
 #   new_word = ''
