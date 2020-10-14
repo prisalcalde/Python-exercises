@@ -1,3 +1,19 @@
+# Write a reverse_string function:
+
+def reverse_string(word):
+  new_word = ''
+  # index starts at the end
+  i = len(word) - 1
+  # reverse the range from the last index to -1 making the step -1
+  for i in range(len(word) - 1, -1, -1):
+    new_word += word[i]
+  return new_word
+
+print(reverse_string("Hello world!"))
+# should print !dlrow olleH
+print(reverse_string("Telephone"))
+
+
 # Write a program (using functions!) that asks the user for a long string containing multiple words.
 # Print back to the user the same string, except with the words in backwards order.
 
