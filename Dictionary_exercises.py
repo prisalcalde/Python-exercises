@@ -30,3 +30,15 @@ def values_that_are_keys(my_dictionary):
     if key in my_dictionary.values():
       list_values.append(key)
   return list_values
+
+# Write a function named max_key that takes a dictionary named my_dictionary as a parameter. The function 
+# should return the key associated with the largest value in the dictionary.
+def max_key(my_dictionary):
+  values_list = []
+  for key in my_dictionary:
+    values_list.append(my_dictionary[key])
+  values_list.sort()
+  max_value = values_list[-1]
+  for key in my_dictionary:
+    if my_dictionary[key] == max_value:
+      return key
