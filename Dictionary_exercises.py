@@ -21,3 +21,6 @@ def add_ten(my_dictionary):
   for key in my_dictionary.keys():
     my_dictionary[key] += 10
   return my_dictionary
+
+#Create a function named values_that_are_keys that takes a dictionary named my_dictionary as a parameter. 
+This function should return a list of all values in the dictionary that are also keys.
