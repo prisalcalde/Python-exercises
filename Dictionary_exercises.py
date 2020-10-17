@@ -42,3 +42,11 @@ def max_key(my_dictionary):
   for key in my_dictionary:
     if my_dictionary[key] == max_value:
       return key
+
+# Write a function named word_length_dictionary that takes a list of strings named words as a parameter. 
+# The function should return a dictionary of key/value pairs where every key is a word in words and every value is the length of that word.
+def word_length_dictionary(words):
+  dictionary_words = {}
+  for item in words:
+    dictionary_words[item] = len(item)
+  return dictionary_words
