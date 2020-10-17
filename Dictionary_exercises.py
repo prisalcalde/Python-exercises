@@ -14,3 +14,10 @@ def sum_even_keys(my_dictionary):
     if key % 2 == 0:
       sum_even_values += my_dictionary[key]
   return sum_even_values
+
+# Create a function named add_ten that takes a dictionary with integer values named my_dictionary as a parameter. 
+# The function should add 10 to every value in my_dictionary and return my_dictionary.
+def add_ten(my_dictionary):
+  for key in my_dictionary.keys():
+    my_dictionary[key] += 10
+  return my_dictionary
