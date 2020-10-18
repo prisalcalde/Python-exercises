@@ -50,3 +50,24 @@ def word_length_dictionary(words):
   for item in words:
     words_dictionary[item] = len(item)
   return words_dictionary
+
+# Write a function named frequency_dictionary that takes a list of elements named words as a parameter. The function should return a 
+# dictionary containing the frequency of each element in words.
+def frequency_dictionary(words):
+  words_dictionary = {}
+  for item in words:
+    if item not in words_dictionary.keys():
+      words_dictionary[item] = 1
+    else:
+      words_dictionary[item] += 1
+  return words_dictionary
+
+# Create a function named unique_values that takes a dictionary named my_dictionary as a parameter. The function should return the 
+# number of unique values in the dictionary.
+def unique_values(my_dictionary):
+  unique_values = []
+  for value in my_dictionary.values():
+    if value not in unique_values:
+      unique_values.append(value)
+  return len(unique_values)
+    
