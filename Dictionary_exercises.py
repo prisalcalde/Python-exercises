@@ -79,7 +79,6 @@ def unique_values(my_dictionary):
 # So in example above, the function would return:
 # {"S" : 4, "L": 3}
 
-
 def count_first_letter(names):
   # key - first letter of the last name
   # value - number of people whose last name begines with that letter
