@@ -44,3 +44,36 @@ kids = Menu('Kids',kids_menu , 1100, 2100)
 
 print(brunch.calculate_bill(['pancakes', 'home fries', 'coffee']))
 print(early_bird.calculate_bill(['salumeria plate', 'mushroom ravioli (vegan)']))
+
+# Creating the Franchises ----------------------------------------
+
+menus = [brunch, early_bird, dinner, kids]
+
+class Franchise:
+  def __init__(self, address, menus):
+    self.address = address
+    self.menus = menus
+
+  def __repr__(self):
+    return self.address
+  
+  def available_menus(self, time):
+    available_menus = []
+    for menu in self.menus:
+      if time >= menu.start_time and time <= menu.end_time:
+        available_menus.append(menu)
+    return available_menus
+
+# Flagship store
+flagship_address = '1232 West End Road'
+
+flagship_store = Franchise(flagship_address, menus)
+
+# New installment
+new_installment_address = '12 East Mulberry Street'
+
+new_installment = Franchise(new_installment_address, menus)
+
+print(flagship_store)
+print(flagship_store.available_menus(1200))
+print(flagship_store.available_menus(1700))
