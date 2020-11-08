@@ -1,3 +1,2 @@
-# Python-exercises
-Hello!
-Here's a list of Python exercises that I've been practicing in my spare time...
+# Python exercises
+Hello! 🐍
