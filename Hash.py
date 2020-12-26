@@ -71,9 +71,9 @@ class HashMap:
     return
 
 hash_map = HashMap(15)
-hash_map.assign('gabbro','igneous')
-hash_map.assign('sandstone','sedimentary')
-hash_map.assign('gneiss','metamorphic')
-print(hash_map.retrieve('gabbro'))
-print(hash_map.retrieve('sandstone'))
-print(hash_map.retrieve('gneiss'))
+hash_map.assign('red','blue')
+hash_map.assign('yellow','purple')
+hash_map.assign('green','pink')
+print(hash_map.retrieve('red'))
+print(hash_map.retrieve('yellow'))
+print(hash_map.retrieve('green'))
