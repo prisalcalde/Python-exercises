@@ -11,8 +11,7 @@ class TreeNode:
   def remove_child(self, child_node):
     # removes parent-child relationship
     print("Removing " + child_node.value + " from " + self.value)
-    self.children = [child for child in self.children 
-                     if child is not child_node]
+    self.children = [child for child in self.children if child is not child_node]
 
   def traverse(self):
     # moves through each node referenced from self downwards
