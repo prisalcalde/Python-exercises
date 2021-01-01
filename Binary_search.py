@@ -13,6 +13,7 @@ def binary_search(list, number):
     last_item_index = len(list) - 1
 
     while first_item_index <= last_item_index:
+        # the floor division // rounds the result down to the nearest whole number
         middle_item_index = last_item_index - first_item_index // 2
         middle_item = list[middle_item_index]
 
