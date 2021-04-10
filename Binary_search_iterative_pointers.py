@@ -22,7 +22,7 @@ print(binary_search([5,6,7,8,9], 4))
 print(binary_search([5,6,7,8,9], 6))
 
 
-# pointers example
+# Pointers are indices stored in a variable that mark the beginning and end of a list
 # vehicles = ["car", "jet", "camel", "boat"]
 # start_of_list = 0
 # end_of_list = len(vehicles)
